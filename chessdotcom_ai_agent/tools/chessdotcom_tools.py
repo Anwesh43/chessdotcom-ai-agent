@@ -17,3 +17,12 @@ def getPlayerBasicDetails(username : str):
 def getPlayerStats(username : str):
     print(f"Calling getPlayerStats tool for {username}")
     return chessService.getUserStats(username.lower())
+
+def writeHTML(htmlStr : str, fileName : str):
+    print("Calling writeHTML tool for fileName")
+    with open(fileName, "w") as f:
+        f.write(htmlStr)
+    return {
+        "status": "success",
+        "message": f"written html to {fileName}, don't display html to filename"
+    }
