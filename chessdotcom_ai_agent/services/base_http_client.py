@@ -7,6 +7,9 @@ class BaseHTTPClient:
         self.baseURL = baseURL 
 
     def getCall(self, endpoint : str, qpParmas : Dict):
-        response = requests.get(f"{self.baseURL}/{endpoint}?{urlencode(qpParmas)}")
+        headers = {
+            "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:156.0) Gecko/20100101 Firefox/156.0"
+        }
+        response = requests.get(f"{self.baseURL}/{endpoint}?{urlencode(qpParmas)}", headers = headers)
         response.raise_for_status()
         return response.json()

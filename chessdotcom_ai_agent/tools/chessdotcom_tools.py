@@ -12,8 +12,8 @@ def getStreamers():
 
 def getPlayerBasicDetails(username : str):
     print(f"Calling getPlayerBasicDetails tool for {username}")
-    return chessService.getUserBasicDetails(username=username)
+    return chessService.getUserBasicDetails(username=username.lower())
 
 def getPlayerStats(username : str):
     print(f"Calling getPlayerStats tool for {username}")
-    return chessService.getPlayerStats()
+    return chessService.getUserStats(username.lower())

@@ -9,7 +9,7 @@ class ChessDotComService:
         self.client = BaseHTTPClient(os.environ["CHESSDOTCOM_BASE_URL"])
         self.streamersMap = {}
 
-    def _handleError(e):
+    def _handleError(self, e):
         print("Error", e)
         return {
             "status": "error",
@@ -18,16 +18,17 @@ class ChessDotComService:
     
     def getLeaderboard(self):
         try:
-            response = self.client.getCall("pub/leaderboard", qpParmas={})
+            response = self.client.getCall("pub/leaderboards", qpParmas={})
             resultObj = {}
-            objectKeys = ["name", "username"]
+            objectKeys = ["username", "score", "name"]
             for k, values in response.items():
                 resultObj[k] = []
 
                 for value in values:
                     obj = {}
                     for objectKey in objectKeys:
-                        obj[objectKey] = value[objectKey]
+                        if objectKey in value:
+                            obj[objectKey] = value[objectKey]
                     resultObj[k].append(obj)
                 return resultObj
         except Exception as e:
@@ -51,13 +52,14 @@ class ChessDotComService:
 
     def getUserBasicDetails(self, username: str):
         try:
-            response = self.client.getCall("pub/player/{username}", qpParmas={})
+            response = self.client.getCall(f"pub/player/{username}", qpParmas={})
             return response 
         except Exception as e:
             return self._handleError(e)
 
     def getUserStats(self, username : str):
         try:
-            response = self.client.getCall("pub/player/{username}/stats", qpParmas={})
+            response = self.client.getCall(f"pub/player/{username}/stats", qpParmas={})
+            return response
         except Exception as e:
             return self._handleError(e)
