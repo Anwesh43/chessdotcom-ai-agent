@@ -49,7 +49,7 @@ class ChessDotComService:
         except Exception as e:
             return self._handleError(e)
 
-    def getUserBasicDertails(self, username: str):
+    def getUserBasicDetails(self, username: str):
         try:
             response = self.client.getCall("pub/player/{username}", qpParmas={})
             return response 
