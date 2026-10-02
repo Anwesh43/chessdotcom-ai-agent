@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chess.com Leaderboard — Top 3 (Daily)</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:24px; color:#111}
+    h1{margin:0 0 12px 0}
+    .sub{color:#444; margin:0 0 20px 0}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px}
+    .card{border:1px solid #e5e5e5; border-radius:12px; padding:16px; background:#fff}
+    .top{display:flex; gap:12px; align-items:center}
+    img{width:64px;height:64px;border-radius:50%;object-fit:cover; background:#f2f2f2}
+    .name{font-size:18px; font-weight:700; margin:0}
+    .meta{margin:2px 0 0 0; color:#444; font-size:13px}
+    .kv{margin-top:12px; display:grid; grid-template-columns: 1fr 1fr; gap:8px}
+    .kv div{background:#fafafa; border:1px solid #eee; border-radius:10px; padding:10px}
+    .k{color:#555; font-size:12px; margin:0 0 2px 0}
+    .v{font-weight:700; margin:0}
+    a{color:#0b57d0; text-decoration:none}
+    a:hover{text-decoration:underline}
+    .note{margin-top:18px; color:#555; font-size:12px}
+    code{background:#f6f6f6; padding:2px 6px; border-radius:6px}
+  </style>
+</head>
+<body>
+  <h1>Top 3 Chess.com Players — Daily Leaderboard</h1>
+  <p class="sub">Pulled from the current <code>/leaderboards</code> (daily) list and each player’s profile + stats.</p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="top">
+        <img src="https://images.chesscomfiles.com/uploads/v1/user/52897514.38875fc6.200x200o.69d1be5c96eb.jpg" alt="FormerProdigy avatar" />
+        <div>
+          <p class="name">#1 — David Navara <span style="font-weight:600; color:#444">(GM)</span></p>
+          <p class="meta"><a href="https://www.chess.com/member/FormerProdigy" target="_blank" rel="noreferrer">FormerProdigy</a> · Prague · Followers: 1493</p>
+        </div>
+      </div>
+      <div class="kv">
+        <div><p class="k">Daily rating (leaderboard score)</p><p class="v">2580</p></div>
+        <div><p class="k">FIDE (from stats)</p><p class="v">2606</p></div>
+        <div><p class="k">Daily record (W–L–D)</p><p class="v">30–0–17</p></div>
+        <div><p class="k">Best Daily rating</p><p class="v">2591</p></div>
+        <div><p class="k">Blitz (last / best)</p><p class="v">3051 / 3064</p></div>
+        <div><p class="k">Rapid (last / best)</p><p class="v">2608 / 2943</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="top">
+        <img src="https://images.chesscomfiles.com/uploads/v1/user/7848044.9d41a5e9.200x200o.2018b3519732.jpeg" alt="francisbegbie avatar" />
+        <div>
+          <p class="name">#2 — Andy Mack <span style="font-weight:600; color:#444">(FM)</span></p>
+          <p class="meta"><a href="https://www.chess.com/member/francisbegbie" target="_blank" rel="noreferrer">francisbegbie</a> · London, United Kingdom · Followers: 988</p>
+        </div>
+      </div>
+      <div class="kv">
+        <div><p class="k">Daily rating (leaderboard score)</p><p class="v">2506</p></div>
+        <div><p class="k">FIDE (from stats)</p><p class="v">2200</p></div>
+        <div><p class="k">Daily record (W–L–D)</p><p class="v">769–4–7</p></div>
+        <div><p class="k">Best Daily rating</p><p class="v">2622</p></div>
+        <div><p class="k">Blitz (last / best)</p><p class="v">2193 / 2367</p></div>
+        <div><p class="k">Rapid (last / best)</p><p class="v">2388 / 2391</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="top">
+        <img src="" alt="zVanThxng avatar" />
+        <div>
+          <p class="name">#3 — zVanThxng</p>
+          <p class="meta"><a href="https://www.chess.com/member/zVanThxng" target="_blank" rel="noreferrer">zVanThxng</a> · Vietnam · Followers: 0</p>
+        </div>
+      </div>
+      <div class="kv">
+        <div><p class="k">Daily rating (leaderboard score)</p><p class="v">2506</p></div>
+        <div><p class="k">FIDE (from stats)</p><p class="v">—</p></div>
+        <div><p class="k">Daily record (W–L–D)</p><p class="v">4–3–0</p></div>
+        <div><p class="k">Best Daily rating</p><p class="v">—</p></div>
+        <div><p class="k">Tactics (highest)</p><p class="v">400</p></div>
+        <div><p class="k">Profile avatar</p><p class="v">Not set / unavailable</p></div>
+      </div>
+    </section>
+  </div>
+
+  <p class="note">Note: “Leaderboard score” here refers to the <strong>Daily</strong> leaderboard list. Some profiles may omit fields (e.g., name/title/avatar), depending on what the user has set publicly.</p>
+</body>
+</html>
